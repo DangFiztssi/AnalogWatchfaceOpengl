@@ -1,0 +1,4 @@
+#Tue Mar 13 10:38:54 ICT 2018
+base.0=/Users/nvdang/Documents/workspace/SourceCode/Fossil/AndroidWatchface/watchface-master/1-base/build/intermediates/transforms/dexMerger/debug/2
+path.0=classes.dex
+renamed.0=classes.dex
