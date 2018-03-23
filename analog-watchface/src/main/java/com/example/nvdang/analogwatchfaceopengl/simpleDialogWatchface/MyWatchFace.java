@@ -81,7 +81,7 @@ public class MyWatchFace extends Gles2WatchFaceService {
         private TriangleList mMinuteHand;
         private TriangleList mSecondHand;
 
-//         TEXTURE SURFACE
+        //         TEXTURE SURFACE
         private float[] mModelTextureMatrix = new float[16];
         private float[] mMVPTextureMatrix = new float[16];
 
@@ -141,48 +141,46 @@ public class MyWatchFace extends Gles2WatchFaceService {
             mProgram.use();
 
             // create major ticks
-            this.mMajorTicks = this.createMajorTicks(this.mProgram, 0.03f, 0.09f, new float[] { 1f, 1f, 1f, 1f});
+            this.mMajorTicks = this.createMajorTicks(this.mProgram,
+                    0.08f,
+                    0.1f,
+                    new float[] {
+                            1f, 1f, 1f, 1f
+                    });
 
             // create minor ticks
-            this.mMinorTicks = this.createMinorTicks(this.mProgram, 0.02f, 0.06f, new float[]{
-                    0.5f /* red */,
-                    0.5f /* green */,
-                    0.5f /* blue */,
-                    1.0f /* alpha */
-            });
+            this.mMinorTicks = this.createMinorTicks(this.mProgram,
+                    0.04f,
+                    0.07f,
+                    new float[]{
+                            1f, 1f, 1f, 1f
+                    });
 
 
             // create hands
             this.mHourHand = this.createHand(
                     this.mProgram,
-                    0.1f,
-                    0.6f,
+                    0.08f,
+                    0.4f,
                     new float[]{
-                            1.0f, 0.0f, 0.0f, 1.0f
-                    }
-            );
+                            1f, 1f, 1f, 1f
+                    });
 
             this.mMinuteHand = this.createHand(
                     this.mProgram,
-                    0.06f,
-                    0.7f,
+                    0.08f,
+                    0.6f,
                     new float[]{
-                            0f, 0f, 0f, 1f
-//                            0.9f /* red */,
-//                            0.9f /* green */,
-//                            0.9f /* blue */,
-//                            1.0f /* alpha */
-                    }
-            );
+                            1f, 1f, 1f, 1f
+                    });
 
             this.mSecondHand = this.createHand(
                     this.mProgram,
-                    0.06f,
+                    0.08f,
                     1f,
                     new float[]{
-                            0f, 0f, 0f, 1f
-                    }
-            );
+                            1f, 1f, 1f, 1f
+                    });
 
             this.initializeTextureData();
             this.setupTexture();
@@ -387,7 +385,7 @@ public class MyWatchFace extends Gles2WatchFaceService {
             float[] trianglesCoords = new float[9*4];
 
             for (int i = 0; i < 4; i++) {
-                float[] triagleCoords = getTickTriangleCoords(0.03f, 0.09f, i*360/4);
+                float[] triagleCoords = getTickTriangleCoords(width, height, i*360/4);
                 System.arraycopy(triagleCoords, 0, trianglesCoords, i*9, triagleCoords.length);
             }
 
@@ -402,7 +400,8 @@ public class MyWatchFace extends Gles2WatchFaceService {
                 if (i % 3 == 0) {
                     continue;
                 }
-                float[] triangleCoords = getTickTriangleCoords(0.02f, 0.06f, i * 360 / 12);
+                float[] triangleCoords = getTickTriangleCoords(width, height, i * 360 / 12);
+
                 System.arraycopy(triangleCoords, 0, trianglesCoords, index, triangleCoords.length);
                 index += 9;
             }
@@ -441,7 +440,7 @@ public class MyWatchFace extends Gles2WatchFaceService {
 
             Log.d(TAG, "onGlSurfaceCreated");
             // Set the background clear color to black.
-            GLES20.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+//            GLES20.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
 //             Use culling to remove back faces.
 //            GLES20.glEnable(GLES20.GL_CULL_FACE);
@@ -516,7 +515,7 @@ public class MyWatchFace extends Gles2WatchFaceService {
 
             Log.d(TAG, "onDraw");
 
-            GLES20.glClearColor(1.0f, 1.0f, 1.0f, 1);
+            GLES20.glClearColor(0.0f, 0.0f, 1.0f, 1);
             GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
 
@@ -538,20 +537,17 @@ public class MyWatchFace extends Gles2WatchFaceService {
 //            mColorHandle = GLES20.glGetAttribLocation(this.mProgrameWireframeCubeHandle, "a_Color");
 //            mTextureCoordinateHandle = GLES20.glGetAttribLocation(this.mProgrameWireframeCubeHandle, "a_TexCoordinate");
 //
-//            // Set the active texture unit to texture unit 0.
             GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
 //
-//            // Bind the texture to this unit.
             GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mTextureDataHandle);
 //
-//            // Tell the texture uniform sampler to use this texture in the shader by binding to texture unit 0.
             GLES20.glUniform1i(mTextureUniformHandle, 0);
 //
             Matrix.setIdentityM(mModelTextureMatrix, 0);
             Matrix.translateM(mModelTextureMatrix, 0, 0.0f, 0.0f, 2.7f);
 //            Matrix.translateM(mModelTextureMatrix, 0, 0.0f, 0.0f, 4.0f);
-            long time = SystemClock.uptimeMillis() % 1000L;
-            float angleInDegrees = (360.0f / 1000.0f) * ((int) time);
+//            long time = SystemClock.uptimeMillis() % 1000L;
+//            float angleInDegrees = (360.0f / 1000.0f) * ((int) time);
 //            Matrix.rotateM(mModelTextureMatrix, 0, angleInDegrees , 0.0f, 0.0f, 1.0f);
             drawCube();
 

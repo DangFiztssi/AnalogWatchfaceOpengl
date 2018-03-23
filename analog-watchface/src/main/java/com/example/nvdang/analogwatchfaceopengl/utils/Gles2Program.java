@@ -45,6 +45,7 @@ public class Gles2Program {
         this.mMVPMatrixHandle = GLES20.glGetUniformLocation(this.mProgramHandleId, "u_MVPMatrix");
         this.mPositionHandle = GLES20.glGetAttribLocation(this.mProgramHandleId, "a_Position");
         GLES20.glEnableVertexAttribArray(mPositionHandle);
+
         this.mColorHandle = GLES20.glGetAttribLocation(this.mProgramHandleId, "a_Color");
     }
 
@@ -53,24 +54,26 @@ public class Gles2Program {
         GLES20.glUseProgram(this.mProgramHandleId);
     }
 
-    public void bind(float[] mvpMatrix, FloatBuffer vertexData, float[] color) {
+    public void bind(float[] mvpMatrix, FloatBuffer vertexData, FloatBuffer colorData, float[] color) {
         // Pass the VBO with the triangle list's vertices to OpenGL.
+        vertexData.position(0);
         GLES20.glEnableVertexAttribArray(mPositionHandle);
-        if (CHECK_GL_ERRORS) checkGlError("glEnableVertexAttribArray");
-
         GLES20.glVertexAttribPointer(mPositionHandle, TriangleList.COORDS_PER_VERTEX, GLES20.GL_FLOAT,
                 false , TriangleList.BYTES_PER_VERTEX, vertexData);
+        if (CHECK_GL_ERRORS) checkGlError("glEnableVertexAttribArray");
 
 
         // Pass the triangle list's color to OpenGL.
-        GLES20.glEnableVertexAttribArray(mColorHandle);
-//        if (CHECK_GL_ERRORS) checkGlError("glVertexAttribPointer");
-        GLES20.glVertexAttribPointer(mColorHandle, 4, GLES20.GL_FLOAT, false, 28, vertexData);
+//        colorData.position(0);
+//        GLES20.glEnableVertexAttribArray(mColorHandle);
+//        GLES20.glVertexAttribPointer(mColorHandle, 4, GLES20.GL_FLOAT, false, 0, colorData);
+        if (CHECK_GL_ERRORS) checkGlError("glVertexAttribPointer");
         GLES20.glUniform4fv(mColorHandle, 1 /* count */, color, 0 /* offset */);
 
 //         Pass MVP matrix into OpenGL
         GLES20.glUniformMatrix4fv(this.mMVPMatrixHandle, 1, false, mvpMatrix, 0);
         if (CHECK_GL_ERRORS) checkGlError("glUniformMatrix4fv");
+
 
     }
 
