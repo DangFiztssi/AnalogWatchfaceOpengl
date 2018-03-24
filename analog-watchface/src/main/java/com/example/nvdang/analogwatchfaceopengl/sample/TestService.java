@@ -4,14 +4,22 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Rect;
 import android.opengl.GLES20;
 import android.opengl.Matrix;
+import android.support.wearable.complications.ComplicationData;
+import android.support.wearable.complications.rendering.ComplicationDrawable;
 import android.support.wearable.watchface.Gles2WatchFaceService;
 import android.support.wearable.watchface.WatchFaceStyle;
 import android.text.format.Time;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.Gravity;
 import android.view.SurfaceHolder;
+
+import com.example.nvdang.analogwatchfaceopengl.R;
 
 import java.util.TimeZone;
 
@@ -22,6 +30,87 @@ import java.util.TimeZone;
 public class TestService extends Gles2WatchFaceService {
 
     private static final String TAG = "TiltWatchFaceService";
+
+      /*Create List Compllication*/
+
+    // TODO: Step 2, intro 1
+    private static final int LEFT_COMPLICATION_ID = 0;
+    private static final int RIGHT_COMPLICATION_ID = 1;
+    private static final int BOTTOM_COMPLICATION_ID = 2;
+
+    private static final int[] COMPLICATION_IDS = {LEFT_COMPLICATION_ID,
+            RIGHT_COMPLICATION_ID, BOTTOM_COMPLICATION_ID};
+
+    private SparseArray<ComplicationData> mActiveComplicationDataSparseArray;
+
+    private SparseArray<ComplicationDrawable> mComplicationDrawableSparseArray;
+
+    // Left and right dial supported types.
+    private static final int[][] COMPLICATION_SUPPORTED_TYPES = {
+            {
+                    ComplicationData.TYPE_RANGED_VALUE,
+                    ComplicationData.TYPE_ICON,
+                    ComplicationData.TYPE_SHORT_TEXT,
+                    ComplicationData.TYPE_SMALL_IMAGE
+            },
+            {
+                    ComplicationData.TYPE_RANGED_VALUE,
+                    ComplicationData.TYPE_ICON,
+                    ComplicationData.TYPE_SHORT_TEXT,
+                    ComplicationData.TYPE_SMALL_IMAGE
+            },
+
+            {
+                    ComplicationData.TYPE_RANGED_VALUE,
+                    ComplicationData.TYPE_ICON,
+                    ComplicationData.TYPE_SHORT_TEXT,
+                    ComplicationData.TYPE_SMALL_IMAGE
+            }
+    };
+
+
+    // Used by {@link ComplicationConfigActivity} to retrieve id for complication locations and
+    // to check if complication location is supported.
+    // TODO: Step 3, expose complication information, part 1
+    static int getComplicationId(
+            ComplicationConfigActivity.ComplicationLocation complicationLocation) {
+        switch (complicationLocation) {
+            case LEFT:
+                return LEFT_COMPLICATION_ID;
+            case RIGHT:
+                return RIGHT_COMPLICATION_ID;
+            case BOTTOM:
+                return BOTTOM_COMPLICATION_ID;
+            default:
+                return -1;
+        }
+    }
+
+    // Used by {@link ComplicationConfigActivity} to retrieve all complication ids.
+    // TODO: Step 3, expose complication information, part 2
+    static int[] getComplicationIds()
+    {
+        return COMPLICATION_IDS;
+    }
+
+    // Used by {@link ComplicationConfigActivity} to retrieve complication types supported by
+    // location.
+    // TODO: Step 3, expose complication information, part 3
+    static int[] getSupportedComplicationTypes(
+            ComplicationConfigActivity.ComplicationLocation complicationLocation) {
+        switch (complicationLocation) {
+            case LEFT:
+                return COMPLICATION_SUPPORTED_TYPES[0];
+            case RIGHT:
+                return COMPLICATION_SUPPORTED_TYPES[1];
+            case BOTTOM:
+                return  COMPLICATION_SUPPORTED_TYPES[2];
+            default:
+                return new int[] {};
+        }
+    }
+
+    /*----- Create Engine -----*/
 
     @Override
     public Engine onCreateEngine() {
@@ -123,6 +212,64 @@ public class TestService extends Gles2WatchFaceService {
                     .build());
         }
 
+        /*-- Init Complications --*/
+
+        // TODO: Step 2, initializeComplications()
+        private void initializeComplications() {
+            Log.d(TAG, "initializeComplications()");
+
+            mActiveComplicationDataSparseArray = new SparseArray<>(COMPLICATION_IDS.length);
+
+            ComplicationDrawable leftComplicationDrawable =
+                    (ComplicationDrawable) getDrawable(R.drawable.custom_complication_styles);
+            leftComplicationDrawable.setContext(getApplicationContext());
+
+            ComplicationDrawable rightComplicationDrawable =
+                    (ComplicationDrawable) getDrawable(R.drawable.custom_complication_styles);
+            rightComplicationDrawable.setContext(getApplicationContext());
+
+            ComplicationDrawable bottomComplicationDrawable =
+                    (ComplicationDrawable) getDrawable(R.drawable.custom_complication_styles);
+            bottomComplicationDrawable.setContext(getApplicationContext());
+
+
+            mComplicationDrawableSparseArray = new SparseArray<>(COMPLICATION_IDS.length);
+            mComplicationDrawableSparseArray.put(LEFT_COMPLICATION_ID, leftComplicationDrawable);
+            mComplicationDrawableSparseArray.put(RIGHT_COMPLICATION_ID, rightComplicationDrawable);
+            mComplicationDrawableSparseArray.put(BOTTOM_COMPLICATION_ID, bottomComplicationDrawable);
+
+            setActiveComplications(COMPLICATION_IDS);
+//           mActiveComplicationDataSparseArray = new SparseArray<>(COMPLICATION_IDS.length);
+//            mComplicationDrawableSparseArray = new SparseArray<>(COMPLICATION_IDS.length);
+        }
+
+        /*-- Implementation onComplicationUpdate function --*/
+
+
+        @Override
+        public void onComplicationDataUpdate(
+                int complicationId, ComplicationData complicationData) {
+            Log.d(TAG, "onComplicationDataUpdate() id: " + complicationId);
+
+            // Adds/updates active complication data in the array.
+            mActiveComplicationDataSparseArray.put(complicationId, complicationData);
+
+            // Updates correct ComplicationDrawable with updated data.
+            ComplicationDrawable complicationDrawable =
+                    mComplicationDrawableSparseArray.get(complicationId);
+            complicationDrawable.setComplicationData(complicationData);
+            complicationDrawable.setBorderColorActive(Color.BLUE);
+
+            Rect bounds = new Rect();
+            if (complicationData.getType() == ComplicationData.TYPE_LONG_TEXT) {
+            } else {
+            }
+            complicationDrawable.setBounds(bounds);
+
+            invalidate();
+        }
+
+
         @Override
         public void onGlContextCreated() {
             if (Log.isLoggable(TAG, Log.DEBUG)) {
@@ -195,7 +342,56 @@ public class TestService extends Gles2WatchFaceService {
 
             Matrix.multiplyMM(mVpMatrices, 0, mProjectionMatrix, 0, mViewMatrices, 0);
             Matrix.multiplyMM(mAmbientVpMatrix, 0, mProjectionMatrix, 0, mAmbientViewMatrix, 0);
+            setComplicationLocation(width,height);
         }
+
+        /*-- Set Complication location --*/
+
+        private  void setComplicationLocation(int width, int height) {
+
+            Log.d(TAG,"set complication location was called");
+            int sizeOfComplication = width / 4;
+            int midpointOfScreen = width / 2;
+
+            int horizontalOffset = (midpointOfScreen - sizeOfComplication) / 2;
+            int verticalOffset = midpointOfScreen - (sizeOfComplication / 2);
+
+            Rect leftBounds =
+                    // Left, Top, Right, Bottom
+                    new Rect(
+                            horizontalOffset,
+                            verticalOffset,
+                            (horizontalOffset + sizeOfComplication),
+                            (verticalOffset + sizeOfComplication));
+
+            ComplicationDrawable leftComplicationDrawable =
+                    mComplicationDrawableSparseArray.get(LEFT_COMPLICATION_ID);
+            leftComplicationDrawable.setBounds(leftBounds);
+
+            Rect rightBounds =
+                    // Left, Top, Right, Bottom
+                    new Rect(
+                            (midpointOfScreen + horizontalOffset),
+                            verticalOffset,
+                            (midpointOfScreen + horizontalOffset + sizeOfComplication),
+                            (verticalOffset + sizeOfComplication));
+
+            ComplicationDrawable rightComplicationDrawable =
+                    mComplicationDrawableSparseArray.get(RIGHT_COMPLICATION_ID);
+            rightComplicationDrawable.setBounds(rightBounds);
+
+            Rect bottomBounds =
+                    // Left, Top, Right, Bottom
+                    new Rect((midpointOfScreen - sizeOfComplication ),
+                            (verticalOffset + sizeOfComplication),
+                            (midpointOfScreen + horizontalOffset*2),
+                            (verticalOffset + sizeOfComplication * 2));
+
+            ComplicationDrawable bottomComplicationDrawable =
+                    mComplicationDrawableSparseArray.get(BOTTOM_COMPLICATION_ID);
+            bottomComplicationDrawable.setBounds(bottomBounds);
+        }
+
 
         /**
          * Creates a triangle for a hand on the watch face.
@@ -319,6 +515,14 @@ public class TestService extends Gles2WatchFaceService {
                 Log.d(TAG, "onAmbientModeChanged: " + inAmbientMode);
             }
             super.onAmbientModeChanged(inAmbientMode);
+
+            ComplicationDrawable complicationDrawable;
+
+            for (int i = 0; i < COMPLICATION_IDS.length; i++) {
+                complicationDrawable = mComplicationDrawableSparseArray.get(COMPLICATION_IDS[i]);
+                complicationDrawable.setInAmbientMode(inAmbientMode);
+            }
+
             invalidate();
         }
 
@@ -424,6 +628,19 @@ public class TestService extends Gles2WatchFaceService {
             // Draw every frame as long as we're visible and in interactive mode.
             if (isVisible() && !isInAmbientMode()) {
                 invalidate();
+            }
+        }
+
+        private void drawComplications(Canvas canvas) {
+            long now = System.currentTimeMillis();
+            int complicationId;
+            ComplicationDrawable complicationDrawable;
+
+            for (int i = 0; i < COMPLICATION_IDS.length; i++) {
+                complicationId = COMPLICATION_IDS[i];
+                complicationDrawable = mComplicationDrawableSparseArray.get(complicationId);
+                complicationDrawable.draw(canvas, now);
+                Log.d(TAG, "draw complications was called");
             }
         }
     }
