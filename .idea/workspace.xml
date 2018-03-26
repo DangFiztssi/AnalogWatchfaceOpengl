@@ -9,10 +9,14 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="00f38990-4c4c-4c9d-9b3a-359db47fa750" name="Default" comment="">
       <change type="MOVED" beforePath="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/MyWatchFace.java" afterPath="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/WatchFaceService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analog-watchface/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/analog-watchface/src/main/AndroidManifest.xml" />
     </list>
+=======
+    <list default="true" id="00f38990-4c4c-4c9d-9b3a-359db47fa750" name="Default" comment="" />
+>>>>>>> Stashed changes
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +42,18 @@
       <file leaf-file-name="WatchFaceService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/WatchFaceService.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< refs/remotes/origin/master
             <state relative-caret-position="222">
               <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+=======
+<<<<<<< Updated upstream
+            <state relative-caret-position="-3273">
+              <caret line="93" column="33" lean-forward="true" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+=======
+            <state relative-caret-position="1373">
+              <caret line="570" column="13" lean-forward="true" selection-start-line="570" selection-start-column="13" selection-end-line="570" selection-end-column="13" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#onTimeTick#0;class#Engine#0;class#WatchFaceService#0" expanded="false" />
@@ -188,11 +202,22 @@
       <find>drawCube</find>
       <find>mPositionHandle</find>
       <find>mColorHandle</find>
+<<<<<<< Updated upstream
       <find>bg</find>
+<<<<<<< refs/remotes/origin/master
       <find>getSupportedComplicationTypes</find>
       <find>initializeComplications</find>
       <find>setComplicationLocation</find>
       <find>mComplicationDrawableSparseArray</find>
+=======
+=======
+      <find>Program</find>
+      <find>mContext</find>
+      <find>gl_Fra</find>
+      <find>mColor</find>
+      <find>mProgram</find>
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -3590,7 +3615,16 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
+<<<<<<< refs/remotes/origin/master
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522122194081" />
+=======
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522054629183" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522055684574" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3637,7 +3671,16 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
+<<<<<<< refs/remotes/origin/master
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522122194081" />
+=======
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522054629183" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522055684574" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3819,7 +3862,16 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
+<<<<<<< refs/remotes/origin/master
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522122194082" />
+=======
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522054629184" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522055684574" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
       </method>
     </configuration>
     <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -3867,7 +3919,16 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
+<<<<<<< refs/remotes/origin/master
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522122194082" />
+=======
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522054629184" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522055684574" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
       </method>
     </configuration>
     <configuration default="false" name="sample-codelab" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -3915,7 +3976,16 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
+<<<<<<< refs/remotes/origin/master
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522122194082" />
+=======
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522054629184" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522055684574" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
       </method>
     </configuration>
     <configuration default="false" name="analog-watchface" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -3963,7 +4033,16 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
+<<<<<<< refs/remotes/origin/master
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522122194082" />
+=======
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522054629184" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522055684575" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
       </method>
     </configuration>
     <list size="4">
@@ -4521,5 +4600,42 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
+=======
+    <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/sample/Gles2ColoredTriangleList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-477">
+          <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;field#VERTEX_SHADER_CODE#0;class#Program#0;class#Gles2ColoredTriangleList#0" expanded="false" />
+            <element signature="method#use#0;class#Program#0;class#Gles2ColoredTriangleList#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/MyWatchFace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1373">
+          <caret line="570" column="13" lean-forward="true" selection-start-line="570" selection-start-column="13" selection-end-line="570" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6247#6282#0" expanded="false" />
+            <element signature="e#7089#7123#0" expanded="false" />
+            <element signature="e#8011#8052#0" expanded="false" />
+            <element signature="e#8958#9001#0" expanded="false" />
+            <element signature="e#9995#10030#0" expanded="false" />
+            <element signature="e#10714#10748#0" expanded="false" />
+            <element signature="method#setupTexture#0;class#Engine#0;class#MyWatchFace#0" expanded="false" />
+            <element signature="method#onTimeTick#0;class#Engine#0;class#MyWatchFace#0" expanded="false" />
+            <element signature="method#onAmbientModeChanged#0;class#Engine#0;class#MyWatchFace#0" expanded="false" />
+            <element signature="method#onVisibilityChanged#0;class#Engine#0;class#MyWatchFace#0" expanded="false" />
+            <element signature="method#registerReceiver#0;class#Engine#0;class#MyWatchFace#0" expanded="false" />
+            <element signature="method#unregisterReceiver#0;class#Engine#0;class#MyWatchFace#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> Stashed changes
   </component>
 </project>
