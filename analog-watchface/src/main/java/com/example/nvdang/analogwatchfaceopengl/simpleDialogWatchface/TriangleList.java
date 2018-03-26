@@ -3,6 +3,7 @@ package com.example.nvdang.analogwatchfaceopengl.simpleDialogWatchface;
 import android.opengl.GLES20;
 import android.util.Log;
 
+import com.example.nvdang.analogwatchfaceopengl.sample.Gles2ColoredTriangleList;
 import com.example.nvdang.analogwatchfaceopengl.utils.Gles2Program;
 
 import org.w3c.dom.ProcessingInstruction;
@@ -57,6 +58,7 @@ public class TriangleList {
 
     public void draw(float[] mvpMatrix) {
         this.mProgram.bind(mvpMatrix, this.mVertexBuffer, this.mColorBuffer, this.mColor);
+//        this.mProgram.bind(mvpMatrix, mVertexBuffer, mColor);
 
         // Draw the triangle list.
         GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, this.mNumberCoords);

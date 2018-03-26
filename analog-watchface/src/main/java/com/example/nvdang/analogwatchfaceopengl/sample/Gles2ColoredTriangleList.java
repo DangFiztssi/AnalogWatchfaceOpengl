@@ -187,9 +187,9 @@ public class Gles2ColoredTriangleList {
          */
         private static final String VERTEX_SHADER_CODE = "" +
                 "uniform mat4 uMvpMatrix;\n" +
-                "attribute vec4 aPosition;\n" +
+                "attribute vec4 a_Position;\n" +
                 "void main() {\n" +
-                "    gl_Position = uMvpMatrix * aPosition;\n" +
+                "    gl_Position = u_MVPMatrix * a_Position;\n" +
                 "}\n";
 
         /**
@@ -197,9 +197,9 @@ public class Gles2ColoredTriangleList {
          */
         private static final String FRAGMENT_SHADER_CODE = "" +
                 "precision mediump float;\n" +
-                "uniform vec4 uColor;\n" +
+                "uniform vec4 u_Color;\n" +
                 "void main() {\n" +
-                "    gl_FragColor = uColor;\n" +
+                "    gl_FragColor = u_Color;\n" +
                 "}\n";
 
         /**
@@ -249,11 +249,11 @@ public class Gles2ColoredTriangleList {
             if (CHECK_GL_ERRORS) checkGlError("glLinkProgram");
 
             // Get a handle to the uMvpMatrix uniform in the vertex shader.
-            mMvpMatrixHandle = GLES20.glGetUniformLocation(mProgramId, "uMvpMatrix");
+            mMvpMatrixHandle = GLES20.glGetUniformLocation(mProgramId, "u_MVPMatrix");
             if (CHECK_GL_ERRORS) checkGlError("glGetUniformLocation");
 
             // Get a handle to the vertex shader's aPosition attribute.
-            mPositionHandle = GLES20.glGetAttribLocation(mProgramId, "aPosition");
+            mPositionHandle = GLES20.glGetAttribLocation(mProgramId, "a_Position");
             if (CHECK_GL_ERRORS) checkGlError("glGetAttribLocation");
 
             // Enable vertex array (VBO).
@@ -261,7 +261,7 @@ public class Gles2ColoredTriangleList {
             if (CHECK_GL_ERRORS) checkGlError("glEnableVertexAttribArray");
 
             // Get a handle to fragment shader's uColor uniform.
-            mColorHandle = GLES20.glGetUniformLocation(mProgramId, "uColor");
+            mColorHandle = GLES20.glGetUniformLocation(mProgramId, "v_Color");
             if (CHECK_GL_ERRORS) checkGlError("glGetUniformLocation");
         }
 

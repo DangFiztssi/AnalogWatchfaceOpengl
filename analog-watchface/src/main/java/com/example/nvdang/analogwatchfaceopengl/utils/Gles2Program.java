@@ -40,13 +40,13 @@ public class Gles2Program {
         int vertexShader = this.compileShader(GLES20.GL_VERTEX_SHADER, vertexShaderCode);
         int fragmentShader = this.compileShader(GLES20.GL_FRAGMENT_SHADER,fragmentShaderCode);
 
-        this.mProgramHandleId = this.createAndLinkProgram(vertexShader, fragmentShader, new String[]{"a_Position", "a_Color"});
+        this.mProgramHandleId = this.createAndLinkProgram(vertexShader, fragmentShader, new String[]{"a_Position", "u_Color"});
 
         this.mMVPMatrixHandle = GLES20.glGetUniformLocation(this.mProgramHandleId, "u_MVPMatrix");
         this.mPositionHandle = GLES20.glGetAttribLocation(this.mProgramHandleId, "a_Position");
         GLES20.glEnableVertexAttribArray(mPositionHandle);
 
-        this.mColorHandle = GLES20.glGetAttribLocation(this.mProgramHandleId, "a_Color");
+        this.mColorHandle = GLES20.glGetUniformLocation(this.mProgramHandleId, "u_Color");
     }
 
     // Tell OpenGL use this program
