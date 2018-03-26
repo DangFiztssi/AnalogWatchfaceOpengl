@@ -1,14 +1,7 @@
 package com.example.nvdang.analogwatchfaceopengl.simpleDialogWatchface;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.opengl.GLES20;
-import android.opengl.GLUtils;
 import android.opengl.Matrix;
-import android.os.SystemClock;
 import android.support.wearable.watchface.Gles2WatchFaceService;
 import android.support.wearable.watchface.WatchFaceStyle;
 import android.util.Log;
@@ -22,16 +15,10 @@ import com.example.nvdang.analogwatchfaceopengl.utils.RawResourceReader;
 import com.example.nvdang.analogwatchfaceopengl.utils.ShaderHelper;
 import com.example.nvdang.analogwatchfaceopengl.utils.TextureHelper;
 
-import org.w3c.dom.ProcessingInstruction;
-
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.util.Calendar;
-import java.util.TimeZone;
-
-import javax.microedition.khronos.egl.EGLConfig;
-import javax.microedition.khronos.opengles.GL10;
 
 /**
  * Analog watch face with a ticking second hand. In ambient mode, the second hand isn't
@@ -145,7 +132,7 @@ public class MyWatchFace extends Gles2WatchFaceService {
                     0.08f,
                     0.1f,
                     new float[] {
-                            1f, 1f, 1f, 1f
+                            0f, 0f, 1f, 1f
                     });
 
             // create minor ticks
@@ -163,7 +150,7 @@ public class MyWatchFace extends Gles2WatchFaceService {
                     0.08f,
                     0.4f,
                     new float[]{
-                            1f, 1f, 1f, 1f
+                            1f, 0f, 0f, 1f
                     });
 
             this.mMinuteHand = this.createHand(
@@ -389,7 +376,9 @@ public class MyWatchFace extends Gles2WatchFaceService {
                 System.arraycopy(triagleCoords, 0, trianglesCoords, i*9, triagleCoords.length);
             }
 
-            return new TriangleList(program, trianglesCoords, color);
+//            return new TriangleList(program, trianglesCoords, color);
+
+            return new TriangleList(this.mProgram, trianglesCoords, color);
         }
 
         private TriangleList createMinorTicks(Gles2Program program, float width, float height, float[] color) {
