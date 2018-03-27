@@ -38,7 +38,7 @@ import java.util.Calendar;
  * in the Google Watch Face Code Lab:
  * https://codelabs.developers.google.com/codelabs/watchface/index.html#0
  */
-public class MyWatchFace extends Gles2WatchFaceService {
+public class WatchFaceService extends Gles2WatchFaceService {
 
     private static final String TAG = "MyOpenGLWatchFace";
 
@@ -185,7 +185,7 @@ public class MyWatchFace extends Gles2WatchFaceService {
             Log.d(TAG, "onCreate");
 
             // Always call setWatchFaceStyle in here
-            setWatchFaceStyle(new WatchFaceStyle.Builder(MyWatchFace.this)
+            setWatchFaceStyle(new WatchFaceStyle.Builder(WatchFaceService.this)
                     .setCardPeekMode(WatchFaceStyle.PEEK_MODE_SHORT)
                     .setBackgroundVisibility(WatchFaceStyle.BACKGROUND_VISIBILITY_INTERRUPTIVE)
                     .setStatusBarGravity(Gravity.RIGHT | Gravity.TOP)

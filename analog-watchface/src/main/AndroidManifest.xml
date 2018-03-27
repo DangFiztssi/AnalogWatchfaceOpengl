@@ -21,7 +21,7 @@
             android:value="true" />
 
         <service
-            android:name=".simpleDialogWatchface.MyWatchFace"
+            android:name=".simpleDialogWatchface.WatchFaceService"
             android:label="@string/my_analog_name"
             android:permission="android.permission.BIND_WALLPAPER">
             <meta-data
