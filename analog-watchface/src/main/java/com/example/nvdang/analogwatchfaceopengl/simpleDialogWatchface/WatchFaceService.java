@@ -1,6 +1,6 @@
 package com.example.nvdang.analogwatchfaceopengl.simpleDialogWatchface;
 
-import android.graphics.Canvas;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.opengl.GLES20;
@@ -174,8 +174,9 @@ public class WatchFaceService extends Gles2WatchFaceService {
         private final int mColorDataSize = 4;
         private final int mTextureCoordinateDataSize = 2;
 
-        private int mProgrameWireframeCubeHandle;
+        private int mProgramWireframeCubeHandle;
         private int mTextureDataHandle;
+        private int mComplicationTextureDataHandle;
 
 
         @Override
@@ -230,9 +231,8 @@ public class WatchFaceService extends Gles2WatchFaceService {
         /*-- Implementation onComplicationUpdate function --*/
 
         @Override
-        public void onComplicationDataUpdate(
-                int complicationId, ComplicationData complicationData) {
-            Log.d(TAG, "onComplicationDataUpdate() id: " + complicationId);
+        public void onComplicationDataUpdate(int complicationId, ComplicationData complicationData) {
+            Log.e(TAG, "onComplicationDataUpdate() id: " + complicationId);
 
             // Adds/updates active complication data in the array.
             mActiveComplicationDataSparseArray.put(complicationId, complicationData);
@@ -247,6 +247,9 @@ public class WatchFaceService extends Gles2WatchFaceService {
             } else {
             }
             complicationDrawable.setBounds(bounds);
+
+            Bitmap bm = TextureHelper.drawableToBitmap(complicationDrawable);
+            this.mTextureDataHandle = TextureHelper.getTextureFromBitmap(bm);
 
             invalidate();
         }
@@ -436,18 +439,22 @@ public class WatchFaceService extends Gles2WatchFaceService {
             final int vertexShaderHandle = ShaderHelper.compileShader(GLES20.GL_VERTEX_SHADER, vertexShader);
             final int fragmentShaderHandle = ShaderHelper.compileShader(GLES20.GL_FRAGMENT_SHADER, fragmentShader);
 
-            this.mProgrameWireframeCubeHandle = ShaderHelper.createAndLinkProgram(vertexShaderHandle, fragmentShaderHandle,
+            this.mProgramWireframeCubeHandle = ShaderHelper.createAndLinkProgram(vertexShaderHandle, fragmentShaderHandle,
                     new String[]{"a_Position", "a_Color", "a_Normal", "a_TexCoordinate"});
 
 
-            this.mTextureDataHandle = TextureHelper.loadTexture(getApplicationContext(), R.drawable.bg);
+            this.mTextureDataHandle = TextureHelper.getTextureFromResourceId(getApplicationContext(), R.drawable.bg);
 
-            mMVPMatrixTextureHandle = GLES20.glGetUniformLocation(this.mProgrameWireframeCubeHandle, "u_MVPMatrix");
-            mMVMatrixTextureHandle = GLES20.glGetUniformLocation(this.mProgrameWireframeCubeHandle, "u_MVMatrix");
-            mTextureUniformHandle = GLES20.glGetUniformLocation(this.mProgrameWireframeCubeHandle, "u_Texture");
-            mPositionHandle = GLES20.glGetAttribLocation(this.mProgrameWireframeCubeHandle, "a_Position");
-            mColorHandle = GLES20.glGetAttribLocation(this.mProgrameWireframeCubeHandle, "a_Color");
-            mTextureCoordinateHandle = GLES20.glGetAttribLocation(this.mProgrameWireframeCubeHandle, "a_TexCoordinate");
+            mMVPMatrixTextureHandle = GLES20.glGetUniformLocation(this.mProgramWireframeCubeHandle, "u_MVPMatrix");
+            mMVMatrixTextureHandle = GLES20.glGetUniformLocation(this.mProgramWireframeCubeHandle, "u_MVMatrix");
+            mTextureUniformHandle = GLES20.glGetUniformLocation(this.mProgramWireframeCubeHandle, "u_Texture");
+            mPositionHandle = GLES20.glGetAttribLocation(this.mProgramWireframeCubeHandle, "a_Position");
+            mColorHandle = GLES20.glGetAttribLocation(this.mProgramWireframeCubeHandle, "a_Color");
+            mTextureCoordinateHandle = GLES20.glGetAttribLocation(this.mProgramWireframeCubeHandle, "a_TexCoordinate");
+        }
+
+        private void setupTextureForComplication() {
+
         }
 
         private TriangleList createHand(Gles2Program program, float width, float height, float[] color) {
@@ -589,7 +596,7 @@ public class WatchFaceService extends Gles2WatchFaceService {
             final int minIndex = (int) (minutes / 60f * 360f);
             final int hoursIndex = (int) (hours / 12f * 360f);
 
-            GLES20.glUseProgram(mProgrameWireframeCubeHandle);
+            GLES20.glUseProgram(mProgramWireframeCubeHandle);
 
             GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
 //
@@ -664,21 +671,23 @@ public class WatchFaceService extends Gles2WatchFaceService {
 
             // Draw the cube.
             GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, 6);
-
         }
 
-        private void drawComplications(Canvas canvas) {
+        private void drawComplications() {
             long now = System.currentTimeMillis();
             int complicationId;
             ComplicationDrawable complicationDrawable;
 
-            for (int i = 0; i < COMPLICATION_IDS.length; i++) {
-                complicationId = COMPLICATION_IDS[i];
+            for (int id : COMPLICATION_IDS) {
+                complicationId = id;
                 complicationDrawable = mComplicationDrawableSparseArray.get(complicationId);
-                complicationDrawable.draw(canvas, now);
-                Log.d(TAG, "draw complications was called");
+                //complicationDrawable.draw(canvas, now);
+
+                Bitmap bm = TextureHelper.drawableToBitmap(complicationDrawable);
+                this.mTextureDataHandle = TextureHelper.getTextureFromBitmap(bm);
             }
         }
+
 
     }
 }
