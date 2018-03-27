@@ -210,6 +210,8 @@ public class TestService extends Gles2WatchFaceService {
                     .setHotwordIndicatorGravity(Gravity.LEFT | Gravity.TOP)
                     .setShowSystemUiTime(false)
                     .build());
+
+            initializeComplications();
         }
 
         /*-- Init Complications --*/
