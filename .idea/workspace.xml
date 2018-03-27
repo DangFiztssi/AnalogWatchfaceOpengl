@@ -6,24 +6,17 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="MyOpenGLWatchFace" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="00f38990-4c4c-4c9d-9b3a-359db47fa750" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/WatchFaceService.java" afterPath="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/WatchFaceService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/utils/TextureHelper.java" afterPath="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/utils/TextureHelper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/MyWatchFace.java" afterPath="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/WatchFaceService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analog-watchface/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/analog-watchface/src/main/AndroidManifest.xml" />
     </list>
+=======
+    <list default="true" id="00f38990-4c4c-4c9d-9b3a-359db47fa750" name="Default" comment="" />
+>>>>>>> Stashed changes
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +42,18 @@
       <file leaf-file-name="WatchFaceService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/WatchFaceService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="56" column="53" lean-forward="false" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
+<<<<<<< refs/remotes/origin/master
+            <state relative-caret-position="222">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+=======
+<<<<<<< Updated upstream
+            <state relative-caret-position="-3273">
+              <caret line="93" column="33" lean-forward="true" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+=======
+            <state relative-caret-position="1373">
+              <caret line="570" column="13" lean-forward="true" selection-start-line="570" selection-start-column="13" selection-end-line="570" selection-end-column="13" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#onTimeTick#0;class#Engine#0;class#WatchFaceService#0" expanded="false" />
@@ -67,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/analog-watchface/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -77,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="356">
-              <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -86,11 +89,9 @@
       <file leaf-file-name="TextureHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/utils/TextureHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-23">
-              <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="465">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TriangleList.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TriangleList.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/TriangleList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+            <state relative-caret-position="298">
+              <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -140,11 +141,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
+            <state relative-caret-position="330">
+              <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -159,7 +160,6 @@
             <state relative-caret-position="1500">
               <caret line="107" column="63" lean-forward="false" selection-start-line="107" selection-start-column="63" selection-end-line="107" selection-end-column="63" />
               <folding>
-                <element signature="imports" expanded="false" />
                 <marker date="1522055486000" expanded="true" signature="9172:9261" ph="{...}" />
               </folding>
             </state>
@@ -202,11 +202,22 @@
       <find>drawCube</find>
       <find>mPositionHandle</find>
       <find>mColorHandle</find>
+<<<<<<< Updated upstream
+      <find>bg</find>
+<<<<<<< refs/remotes/origin/master
       <find>getSupportedComplicationTypes</find>
       <find>initializeComplications</find>
       <find>setComplicationLocation</find>
       <find>mComplicationDrawableSparseArray</find>
-      <find>bg</find>
+=======
+=======
+      <find>Program</find>
+      <find>mContext</find>
+      <find>gl_Fra</find>
+      <find>mColor</find>
+      <find>mProgram</find>
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -3173,12 +3184,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/MyWatchFace.java" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/analog-watchface/src/main/res/raw/texture_fragment_shader.glsl" />
+        <option value="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/TriangleList.java" />
         <option value="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/utils/Gles2Program.java" />
         <option value="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/sample/TestService.java" />
         <option value="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/MyWatchFace.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/TriangleList.java" />
-        <option value="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/utils/TextureHelper.java" />
         <option value="$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/WatchFaceService.java" />
       </list>
     </option>
@@ -3411,10 +3421,6 @@
               <option name="myItemId" value="analogwatchfaceopengl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -3501,6 +3507,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="analogwatchfaceopengl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3605,7 +3615,16 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522138825256" />
+<<<<<<< refs/remotes/origin/master
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522122194081" />
+=======
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522054629183" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522055684574" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3652,7 +3671,16 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522138825256" />
+<<<<<<< refs/remotes/origin/master
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522122194081" />
+=======
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522054629183" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522055684574" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3834,7 +3862,16 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522138825257" />
+<<<<<<< refs/remotes/origin/master
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522122194082" />
+=======
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522054629184" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522055684574" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
       </method>
     </configuration>
     <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -3882,7 +3919,16 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522138825257" />
+<<<<<<< refs/remotes/origin/master
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522122194082" />
+=======
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522054629184" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522055684574" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
       </method>
     </configuration>
     <configuration default="false" name="sample-codelab" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -3930,7 +3976,16 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522138825257" />
+<<<<<<< refs/remotes/origin/master
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522122194082" />
+=======
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522054629184" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522055684574" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
       </method>
     </configuration>
     <configuration default="false" name="analog-watchface" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -3978,7 +4033,16 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522138825257" />
+<<<<<<< refs/remotes/origin/master
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522122194082" />
+=======
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522054629184" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522055684575" />
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "master" and "origin/master"
       </method>
     </configuration>
     <list size="4">
@@ -4043,7 +4107,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.348226" sideWeight="0.496337" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.348226" sideWeight="0.496337" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -4103,15 +4167,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/WatchFaceService.java</url>
-          <line>234</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -4165,7 +4221,6 @@
         <state relative-caret-position="3405">
           <caret line="234" column="50" lean-forward="false" selection-start-line="234" selection-start-column="50" selection-end-line="234" selection-end-column="50" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1522055486000" expanded="true" signature="9172:9261" ph="{...}" />
           </folding>
         </state>
@@ -4220,7 +4275,6 @@
         <state relative-caret-position="3405">
           <caret line="234" column="50" lean-forward="false" selection-start-line="234" selection-start-column="50" selection-end-line="234" selection-end-column="50" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1522055486000" expanded="true" signature="9172:9261" ph="{...}" />
           </folding>
         </state>
@@ -4289,7 +4343,6 @@
         <state relative-caret-position="4275">
           <caret line="292" column="56" lean-forward="false" selection-start-line="292" selection-start-column="56" selection-end-line="292" selection-end-column="56" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1522055486000" expanded="true" signature="9172:9261" ph="{...}" />
           </folding>
         </state>
@@ -4341,7 +4394,6 @@
         <state relative-caret-position="3345">
           <caret line="230" column="76" lean-forward="false" selection-start-line="230" selection-start-column="76" selection-end-line="230" selection-end-column="76" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1522055486000" expanded="true" signature="9172:9261" ph="{...}" />
           </folding>
         </state>
@@ -4432,12 +4484,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/utils/TextureHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/sample/Gles2ColoredTriangleList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1500">
           <caret line="107" column="63" lean-forward="false" selection-start-line="107" selection-start-column="63" selection-end-line="107" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1522055486000" expanded="true" signature="9172:9261" ph="{...}" />
           </folding>
         </state>
@@ -4451,6 +4510,17 @@
             <element signature="imports" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/res/drawable-nodpi/bg.png">
@@ -4494,7 +4564,7 @@
     <entry file="file://$PROJECT_DIR$/analog-watchface/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -4502,33 +4572,15 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
-          <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/TriangleList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/utils/TextureHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/WatchFaceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="56" column="53" lean-forward="false" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
+        <state relative-caret-position="222">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#onTimeTick#0;class#Engine#0;class#WatchFaceService#0" expanded="false" />
@@ -4540,16 +4592,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/TriangleList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
+        <state relative-caret-position="298">
+          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
+    </entry>
+<<<<<<< Updated upstream
+=======
+    <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/sample/Gles2ColoredTriangleList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-477">
+          <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;field#VERTEX_SHADER_CODE#0;class#Program#0;class#Gles2ColoredTriangleList#0" expanded="false" />
+            <element signature="method#use#0;class#Program#0;class#Gles2ColoredTriangleList#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/analog-watchface/src/main/java/com/example/nvdang/analogwatchfaceopengl/simpleDialogWatchface/MyWatchFace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1373">
+          <caret line="570" column="13" lean-forward="true" selection-start-line="570" selection-start-column="13" selection-end-line="570" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6247#6282#0" expanded="false" />
+            <element signature="e#7089#7123#0" expanded="false" />
+            <element signature="e#8011#8052#0" expanded="false" />
+            <element signature="e#8958#9001#0" expanded="false" />
+            <element signature="e#9995#10030#0" expanded="false" />
+            <element signature="e#10714#10748#0" expanded="false" />
+            <element signature="method#setupTexture#0;class#Engine#0;class#MyWatchFace#0" expanded="false" />
+            <element signature="method#onTimeTick#0;class#Engine#0;class#MyWatchFace#0" expanded="false" />
+            <element signature="method#onAmbientModeChanged#0;class#Engine#0;class#MyWatchFace#0" expanded="false" />
+            <element signature="method#onVisibilityChanged#0;class#Engine#0;class#MyWatchFace#0" expanded="false" />
+            <element signature="method#registerReceiver#0;class#Engine#0;class#MyWatchFace#0" expanded="false" />
+            <element signature="method#unregisterReceiver#0;class#Engine#0;class#MyWatchFace#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> Stashed changes
   </component>
 </project>
